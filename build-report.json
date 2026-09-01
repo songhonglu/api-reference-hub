@@ -1,0 +1,322 @@
+{
+  "sourceCount": 45,
+  "pageCount": 45,
+  "generatedAt": "2026-09-01T14:18:15.189Z",
+  "modules": [
+    {
+      "title": "报表中心",
+      "slug": "reporting",
+      "category": "业务应用",
+      "endpointCount": 71,
+      "url": "api/reporting.html"
+    },
+    {
+      "title": "测试项目",
+      "slug": "test-project",
+      "category": "平台与集成",
+      "endpointCount": 11,
+      "url": "api/test-project.html"
+    },
+    {
+      "title": "低代码平台",
+      "slug": "low-code",
+      "category": "平台与集成",
+      "endpointCount": 123,
+      "url": "api/low-code.html"
+    },
+    {
+      "title": "电子签章应用",
+      "slug": "e-signature",
+      "category": "业务应用",
+      "endpointCount": 28,
+      "url": "api/e-signature.html"
+    },
+    {
+      "title": "定制开发(正式)",
+      "slug": "custom-development",
+      "category": "平台与集成",
+      "endpointCount": 86,
+      "url": "api/custom-development.html"
+    },
+    {
+      "title": "分析中心",
+      "slug": "analytics",
+      "category": "业务应用",
+      "endpointCount": 6,
+      "url": "api/analytics.html"
+    },
+    {
+      "title": "工会管理",
+      "slug": "union-management",
+      "category": "业务应用",
+      "endpointCount": 31,
+      "url": "api/union-management.html"
+    },
+    {
+      "title": "工资条",
+      "slug": "payslip",
+      "category": "业务应用",
+      "endpointCount": 3,
+      "url": "api/payslip.html"
+    },
+    {
+      "title": "公告",
+      "slug": "bulletins",
+      "category": "业务应用",
+      "endpointCount": 79,
+      "url": "api/bulletins.html"
+    },
+    {
+      "title": "公文管理",
+      "slug": "official-documents",
+      "category": "业务应用",
+      "endpointCount": 548,
+      "url": "api/official-documents.html"
+    },
+    {
+      "title": "归档管理",
+      "slug": "archive-management",
+      "category": "业务应用",
+      "endpointCount": 21,
+      "url": "api/archive-management.html"
+    },
+    {
+      "title": "后勤管理",
+      "slug": "logistics",
+      "category": "业务应用",
+      "endpointCount": 36,
+      "url": "api/logistics.html"
+    },
+    {
+      "title": "会议管理",
+      "slug": "meeting-management",
+      "category": "业务应用",
+      "endpointCount": 586,
+      "url": "api/meeting-management.html"
+    },
+    {
+      "title": "基础能力接入",
+      "slug": "basic-capability-access",
+      "category": "平台与集成",
+      "endpointCount": 314,
+      "url": "api/basic-capability-access.html"
+    },
+    {
+      "title": "基础设置",
+      "slug": "basic-settings",
+      "category": "平台与集成",
+      "endpointCount": 118,
+      "url": "api/basic-settings.html"
+    },
+    {
+      "title": "集成平台",
+      "slug": "integration-platform",
+      "category": "平台与集成",
+      "endpointCount": 88,
+      "url": "api/integration-platform.html"
+    },
+    {
+      "title": "集成转换",
+      "slug": "integration-transform",
+      "category": "平台与集成",
+      "endpointCount": 58,
+      "url": "api/integration-transform.html"
+    },
+    {
+      "title": "集团公共应用",
+      "slug": "group-applications",
+      "category": "业务应用",
+      "endpointCount": 29,
+      "url": "api/group-applications.html"
+    },
+    {
+      "title": "集团培训应用",
+      "slug": "group-training",
+      "category": "业务应用",
+      "endpointCount": 78,
+      "url": "api/group-training.html"
+    },
+    {
+      "title": "考勤管理",
+      "slug": "attendance",
+      "category": "业务应用",
+      "endpointCount": 26,
+      "url": "api/attendance.html"
+    },
+    {
+      "title": "客开功能验证",
+      "slug": "custom-verification",
+      "category": "平台与集成",
+      "endpointCount": 46,
+      "url": "api/custom-verification.html"
+    },
+    {
+      "title": "连接器",
+      "slug": "connectors",
+      "category": "平台与集成",
+      "endpointCount": 110,
+      "url": "api/connectors.html"
+    },
+    {
+      "title": "流程中心",
+      "slug": "workflow-center",
+      "category": "业务应用",
+      "endpointCount": 80,
+      "url": "api/workflow-center.html"
+    },
+    {
+      "title": "门户",
+      "slug": "portal",
+      "category": "业务应用",
+      "endpointCount": 63,
+      "url": "api/portal.html"
+    },
+    {
+      "title": "区域客开集成",
+      "slug": "regional-integration",
+      "category": "平台与集成",
+      "endpointCount": 49,
+      "url": "api/regional-integration.html"
+    },
+    {
+      "title": "人力资源管理",
+      "slug": "human-resources",
+      "category": "业务应用",
+      "endpointCount": 25,
+      "url": "api/human-resources.html"
+    },
+    {
+      "title": "任务管理",
+      "slug": "task-management",
+      "category": "业务应用",
+      "endpointCount": 5,
+      "url": "api/task-management.html"
+    },
+    {
+      "title": "日程",
+      "slug": "calendar",
+      "category": "业务应用",
+      "endpointCount": 79,
+      "url": "api/calendar.html"
+    },
+    {
+      "title": "事项中心",
+      "slug": "task-center",
+      "category": "业务应用",
+      "endpointCount": 88,
+      "url": "api/task-center.html"
+    },
+    {
+      "title": "数字化管理",
+      "slug": "digital-management",
+      "category": "业务应用",
+      "endpointCount": 91,
+      "url": "api/digital-management.html"
+    },
+    {
+      "title": "文档管理",
+      "slug": "document-management",
+      "category": "业务应用",
+      "endpointCount": 43,
+      "url": "api/document-management.html"
+    },
+    {
+      "title": "无用户映射测试-V1.0",
+      "slug": "user-mapping-test",
+      "category": "平台与集成",
+      "endpointCount": 2,
+      "url": "api/user-mapping-test.html"
+    },
+    {
+      "title": "消息中心",
+      "slug": "message-center",
+      "category": "业务应用",
+      "endpointCount": 66,
+      "url": "api/message-center.html"
+    },
+    {
+      "title": "新闻",
+      "slug": "news",
+      "category": "业务应用",
+      "endpointCount": 76,
+      "url": "api/news.html"
+    },
+    {
+      "title": "行政办公",
+      "slug": "administration",
+      "category": "业务应用",
+      "endpointCount": 199,
+      "url": "api/administration.html"
+    },
+    {
+      "title": "移动办公",
+      "slug": "mobile-office",
+      "category": "业务应用",
+      "endpointCount": 63,
+      "url": "api/mobile-office.html"
+    },
+    {
+      "title": "音视频服务",
+      "slug": "media-services",
+      "category": "业务应用",
+      "endpointCount": 58,
+      "url": "api/media-services.html"
+    },
+    {
+      "title": "用户中心",
+      "slug": "user-center",
+      "category": "平台与集成",
+      "endpointCount": 82,
+      "url": "api/user-center.html"
+    },
+    {
+      "title": "知识文档",
+      "slug": "knowledge-documents",
+      "category": "业务应用",
+      "endpointCount": 66,
+      "url": "api/knowledge-documents.html"
+    },
+    {
+      "title": "组织模型",
+      "slug": "organization-model",
+      "category": "平台与集成",
+      "endpointCount": 210,
+      "url": "api/organization-model.html"
+    },
+    {
+      "title": "BPM引擎",
+      "slug": "bpm-engine",
+      "category": "业务应用",
+      "endpointCount": 121,
+      "url": "api/bpm-engine.html"
+    },
+    {
+      "title": "V5转换V8",
+      "slug": "v5-migration",
+      "category": "平台与集成",
+      "endpointCount": 211,
+      "url": "api/v5-migration.html"
+    },
+    {
+      "title": "V8中间表同步-V1.0",
+      "slug": "table-sync",
+      "category": "平台与集成",
+      "endpointCount": 2,
+      "url": "api/table-sync.html"
+    },
+    {
+      "title": "zyz练习",
+      "slug": "practice",
+      "category": "平台与集成",
+      "endpointCount": 31,
+      "url": "api/practice.html"
+    },
+    {
+      "title": "开放事件",
+      "slug": "open-events",
+      "category": "开放事件",
+      "endpointCount": 1,
+      "url": "api/open-events.html"
+    }
+  ]
+}
