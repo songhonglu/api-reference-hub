@@ -195,6 +195,9 @@ kbd {
   font-size: clamp(1rem, 2vw, 1.25rem);
   max-width: 520px;
 }
+.hero-copy > p:not(.eyebrow) span {
+  white-space: nowrap;
+}
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -409,7 +412,7 @@ kbd {
 }
 .doc-shell {
   display: grid;
-  grid-template-columns: minmax(190px, 250px) minmax(0, 1fr) minmax(0, 190px);
+  grid-template-columns: minmax(190px, 250px) minmax(0, 1fr) minmax(0, 240px);
   margin: auto;
   max-width: 1500px;
   min-height: calc(100dvh - 72px);
@@ -498,7 +501,7 @@ kbd {
 .article-content li,
 .article-content a {
   max-width: 75ch;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 .article-content a {
   color: var(--accent);
