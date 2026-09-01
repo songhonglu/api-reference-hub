@@ -598,6 +598,8 @@ kbd {
   color: var(--text-muted);
   font-size: 12px;
   line-height: 1.35;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .heading-nav .heading-level-3 {
   padding-left: 10px;
