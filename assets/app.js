@@ -2,8 +2,21 @@ const dialog = document.querySelector("[data-search-dialog]");
 const input = document.querySelector("#site-search");
 const results = document.querySelector("[data-search-results]");
 const moduleNavToggle = document.querySelector("[data-toggle-module-nav]");
+const headingNavToggle = document.querySelector("[data-toggle-heading-nav]");
+const moduleNavigation = document.querySelector("#module-navigation");
+const headingNavigation = document.querySelector("#heading-navigation");
 let index = [];
 let indexUnavailable = false;
+
+function escapeHtml(value) {
+  return value.replace(
+    /[&<>"']/g,
+    (character) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        character
+      ],
+  );
+}
 
 async function loadIndex() {
   if (index.length > 0) return index;
@@ -41,7 +54,7 @@ function renderResults(query) {
     ? matches
         .map(
           (item) =>
-            `<a href="${location.pathname.includes("/api/") ? "../" : ""}${item.url}"><small>${item.category} · ${item.endpointCount} 接口</small><strong>${item.title}</strong><span>${item.excerpt}</span></a>`,
+            `<a href="${location.pathname.includes("/api/") ? "../" : ""}${item.url}"><small>${escapeHtml(item.category)} · ${item.endpointCount} 接口</small><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.excerpt)}</span></a>`,
         )
         .join("")
     : '<p class="search-empty">没有匹配项。请尝试模块名称、业务名称或接口关键词。</p>';
@@ -57,12 +70,74 @@ async function openSearch() {
 document
   .querySelectorAll("[data-open-search]")
   .forEach((button) => button.addEventListener("click", openSearch));
-moduleNavToggle?.addEventListener("click", () => {
-  const expanded = document.body.classList.toggle("module-nav-open");
-  moduleNavToggle.setAttribute("aria-expanded", String(expanded));
-});
+function closeDrawer(openClass, toggle) {
+  document.body.classList.remove(openClass);
+  toggle?.setAttribute("aria-expanded", "false");
+}
+
+function toggleDrawer(openClass, toggle, panel, otherOpenClass, otherToggle) {
+  const expanded = !document.body.classList.contains(openClass);
+  document.body.classList.toggle(openClass, expanded);
+  toggle.setAttribute("aria-expanded", String(expanded));
+  if (!expanded) return;
+  closeDrawer(otherOpenClass, otherToggle);
+  panel?.querySelector("a")?.focus();
+}
+
+moduleNavToggle?.addEventListener("click", () =>
+  toggleDrawer(
+    "module-nav-open",
+    moduleNavToggle,
+    moduleNavigation,
+    "heading-nav-open",
+    headingNavToggle,
+  ),
+);
+headingNavToggle?.addEventListener("click", () =>
+  toggleDrawer(
+    "heading-nav-open",
+    headingNavToggle,
+    headingNavigation,
+    "module-nav-open",
+    moduleNavToggle,
+  ),
+);
+document.querySelectorAll(".module-nav a").forEach((link) =>
+  link.addEventListener("click", () => {
+    closeDrawer("module-nav-open", moduleNavToggle);
+  }),
+);
+document.querySelectorAll(".heading-nav a").forEach((link) =>
+  link.addEventListener("click", () => {
+    closeDrawer("heading-nav-open", headingNavToggle);
+  }),
+);
+const headingLinks = [...document.querySelectorAll("[data-heading-link]")];
+const headings = headingLinks
+  .map((link) => document.getElementById(link.hash.slice(1)))
+  .filter(Boolean);
+const markHeading = (currentId) => {
+  headingLinks.forEach((link) =>
+    link.classList.toggle("is-current-heading", link.hash === `#${currentId}`),
+  );
+};
+if (headings.length > 0) {
+  markHeading(headings[0].id);
+  const headingObserver = new IntersectionObserver(
+    (entries) => {
+      const current = entries.find((entry) => entry.isIntersecting)?.target.id;
+      if (current) markHeading(current);
+    },
+    { root: document.querySelector(".article"), rootMargin: "-15% 0px -70%" },
+  );
+  headings.forEach((heading) => headingObserver.observe(heading));
+}
 input?.addEventListener("input", () => renderResults(input.value));
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeDrawer("module-nav-open", moduleNavToggle);
+    closeDrawer("heading-nav-open", headingNavToggle);
+  }
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
     event.preventDefault();
     openSearch();
