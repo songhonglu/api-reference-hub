@@ -163,7 +163,7 @@ public String openEventCallBack(HttpServletRequest request, @RequestBody Map map
     // 事件的流水号
     String eventId = request.getHeader("eventId");
     // 如果订阅事件时设置了回调token，可以获取token进行校验
-    String eventToken = [REDACTED]"eventToken");
+    String eventToken = request.getHeader("eventToken");
     if (!OpenApiGlobalConfig.EVENT_CALL_BACK_TOKEN.equals(eventToken)) {
         System.err.println("token不匹配，这是非法的请求！");
         return "error";
